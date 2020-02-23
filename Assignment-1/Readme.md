@@ -19,3 +19,5 @@ Note:The portnumber provided to clients should be same as the one given to serve
 I created one executibe (./a.out) with gcc for single client after that for having N client connections I executed ./a.out 
 (N-1) times using "parallel -j (N-1)" command . 
 I measured all the processing times in nanosecs while sending "hello" from one client .
+
+NOTE:- This time is the time required by the server to initialise memory space to 0 and to do a simple addition .
