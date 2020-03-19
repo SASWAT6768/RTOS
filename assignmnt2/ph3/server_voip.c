@@ -70,13 +70,12 @@ int main(int argc, char const *argv[])
     printf("\nWaiting for connection....\n");
     while(1){
         if((new_sock = accept(serv_sock, (struct sockaddr *)&address_serv, (socklen_t*)&addrlen)) >= 0){
-           
-while(1){
+            while(1){
                 uint8_t buff[buffSIZE];
                 ssize_t r;
 
                 int val = read(new_sock, buff, sizeof(buff));
-                printf("connected\n");
+                //printf("Read%d\n", val);
                 
                 // Playing the recorded message
                 if (pa_simple_write(s, buff, sizeof(buff), &error) < 0) {
