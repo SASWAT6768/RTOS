@@ -50,9 +50,7 @@ int main(int argc, char *argv[]){
 	address_serv.sin_family = AF_INET;
    	address_serv.sin_port = htons(9090);
     
-    	if(inet_pton(AF_INET, argv[1], &address_serv.sin_addr)<=0){
-    		perror("pton error");
-    	} 
+     
 
 	printf("\nWaiting for connection....\n");
     	if((connect(client_sock, (struct sockaddr *)&address_serv, sizeof(address_serv))) < 0){
