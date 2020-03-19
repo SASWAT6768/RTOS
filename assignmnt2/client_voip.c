@@ -17,7 +17,7 @@
 #include <config.h>
 #endif
 #define BUFSIZE 1024
-
+//hey
 int main(int argc, char *argv[]){
 	
     // The sample type to use
@@ -50,10 +50,14 @@ int main(int argc, char *argv[]){
 	address_serv.sin_family = AF_INET;
    	address_serv.sin_port = htons(9090);
     
+<<<<<<< HEAD
     	/*if(inet_pton(AF_INET, argv[1], &address_serv.sin_addr)<=0){
     		perror("pton error");
     	}*/ 
 
+=======
+     
+>>>>>>> 301e43159a1cc4753c8cb456365e57809443f843
 
 	printf("\nWaiting for connection....\n");
     	if((connect(client_sock, (struct sockaddr *)&address_serv, sizeof(address_serv))) < 0){
